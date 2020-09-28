@@ -7,20 +7,17 @@
         "conteudo"
         "rodape";
     grid-template-columns: auto;
-    grid-template-rows: 50px auto auto;
+    grid-template-rows: 50px 100vh auto;
 }
 
 .cabecalho {
     grid-area: cabecalho;
-    background: #98FB98;
 }
 
 .conteudo {
     grid-area: conteudo;
-    background: #DEB887;
 }
 
 .rodape {
     grid-area: rodape;
-    background: #6495ED;
 }

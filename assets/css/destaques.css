@@ -1,0 +1,82 @@
+.caixa {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: #DCDCDC;
+}
+
+.destaques {
+  display: grid;
+  grid-gap: .2rem;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 33.33% 33.33% 33.33%;
+  height: calc(100vh - 50px); /*Calcula os 100vh da página e tira 50px que seria do cabeçalho*/
+}  
+
+.destaques__titulo {
+  background-color: rgba(0, 0, 0, .5);
+  color: #FDFDFD;
+  padding: .6rem;
+  text-align: center;
+  width: 100%;
+}
+
+/*__ indicando que principal é filho de destaques*/
+.destaques__principal {
+  /*Colocando a imagem, deixando no centro, cobrindo todo o background e sem repetição*/
+  background: url(../img//fortnite.jpg) center / cover no-repeat; 
+  grid-column: 1 / 4; /*Onde começa e onde termina*/
+  grid-row: 1 / 3;
+}
+
+/*Pegando o segundo filho da classe destaques*/
+.destaques__secundario:nth-child(2) {
+  background: url(../img//pubg.jpg) center / cover no-repeat;
+  grid-column: 4 / 4;
+  grid-row: 1 / 1;
+}
+
+.destaques__secundario:nth-child(3) {
+  background: url(../img/slack.png) center / cover no-repeat;
+  grid-column: 4 / 4;
+  grid-row: 2 / 2;
+}
+
+.destaques__secundario:nth-child(4) {
+  background: url(../img/whatsapp.png) center / cover no-repeat;
+  grid-column: 4 / 4;
+  grid-row: 3 / 3;
+}
+
+.destaques__secundario:nth-child(5) {
+  background: url(../img/cs-go.jpg) center / cover no-repeat; 
+  grid-column: 3 / 3;
+  grid-row: 3 / 3;
+}
+
+.destaques__categorias {
+  grid-column: 1 / 3;
+  grid-row: 3 / 3;
+}
+
+.destaques__categorias___lista {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.destaques__categorias___item {
+  display: flex;
+  align-items: center;
+  background: #FDFDFD;
+  border: 5px solid transparent;
+  color: #333333;
+  padding: 1rem;
+  width: 50%;
+}
+
+.destaques__categorias___link {
+  color: inherit; /*Irá herdar a cor do pai. Por default o link é azul*/
+}
+
